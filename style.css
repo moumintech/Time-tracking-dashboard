@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(226, 43%, 10%);
+  font-size: 18px;
+  color: white;
+}
+.wrapper {
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+  border: 1px solid hsl(226, 43%, 10%);
+}
+.containt {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
