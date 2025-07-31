@@ -10,16 +10,59 @@ body {
   color: white;
 }
 .wrapper {
-  min-height: 100vh;
+  height: 100vh;
   margin: 0 auto;
   padding: 20px;
   max-width: 1200px;
-  border: 1px solid hsl(226, 43%, 10%);
+  border: 1px solid red;
 }
 .containt {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns:repeat(4, 1fr);
+  grid-template-rows:repeat(2, 150px);
+  height:100%;
+  gap: 30px 20px;
+  border: 1px solid red;
+  
+}
+.profile{
+ grid-row: span 2;
+ min-height:100%;
+ width:100%
+ border:1px solid transparent;
+ border-radius:10px;
+ 
+
+}
+.presentation{
+ background-color:hsl(246, 80%, 60%);
+ padding:20px
+ 
+}
+.presentation .bold-name{
+ 
+ font-weight:500;
+ display:block;
+}
+.presentation img{
+width:40px;
+height:40px;
+border-radius:50%;
+border-color:white;
+object-fit: cover;
+}
+.profile ul{
+ padding:20px;
+ background-color:hsl(235, 46%, 20%);
+ 
+}
+.profile li{
+  list-style-type: none;
+  margin-bottom;
+}
+
+ul li {
+  margin-bottom: 10px; 
 }
 
 .attribution {
@@ -28,4 +71,11 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+.daily-work{
+ border:1px solid red;
+ border-radius:10px;
+ padding:0px;
+ gap:10px
+
 }
