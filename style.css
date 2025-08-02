@@ -8,74 +8,119 @@ body {
   background-color: hsl(226, 43%, 10%);
   font-size: 18px;
   color: white;
-}
-.wrapper {
-  height: 100vh;
-  margin: 0 auto;
-  padding: 20px;
-  max-width: 1200px;
-  border: 1px solid red;
-}
-.containt {
-  display: grid;
-  grid-template-columns:repeat(4, 1fr);
-  grid-template-rows:repeat(2, 150px);
-  height:100%;
-  gap: 30px 20px;
-  border: 1px solid red;
+  isplay: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
   
 }
-.profile{
- grid-row: span 2;
- min-height:100%;
- width:100%
- border:1px solid transparent;
- border-radius:10px;
- 
-
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
 }
-.presentation{
- background-color:hsl(246, 80%, 60%);
- padding:20px
- 
+ .profile-card  {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 15px;
+  overflow: hidden;
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
 }
-.presentation .bold-name{
- 
- font-weight:500;
- display:block;
-}
-.presentation img{
-width:40px;
-height:40px;
-border-radius:50%;
-border-color:white;
-object-fit: cover;
-}
-.profile ul{
- padding:20px;
- background-color:hsl(235, 46%, 20%);
- 
-}
-.profile li{
-  list-style-type: none;
-  margin-bottom;
+.profile-info {
+  background-color: hsl(246, 80%, 60%);
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5rem;
 }
 
-ul li {
-  margin-bottom: 10px; 
+.profile-info .avatar {
+  width: 60px;
+  border: 3px solid white;
+  border-radius: 50%;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-.daily-work{
- border:1px solid red;
- border-radius:10px;
- padding:0px;
- gap:10px
 
+.report p {
+  color: hsl(236, 100%, 87%);
+  font-size: 0.875rem;
+}
+
+.report h1 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+.time-filters {
+  list-style: none;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.time-filters li {
+  color: hsl(236, 100%, 87%);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.time-filters li:hover,
+.time-filters li.active {
+  color: white;
+}
+
+.card {
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-bg {
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 60px;
+}
+
+.card-content {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 15px;
+  padding: 1.5rem;
+  position: relative;
+  top: -20px;
+  z-index: 1;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h2 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.card-body {
+  margin-top: 1.5rem;
+}
+
+.card-body .current {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.card-body .previous {
+  font-size: 0.875rem;
+  color: hsl(236, 100%, 87%);
 }
