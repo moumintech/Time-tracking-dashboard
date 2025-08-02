@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -11,11 +10,13 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Frontend Mentor | Time tracking dashboard</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
         font-size: 11px;
@@ -28,149 +29,126 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="wrapper">
-      <div class="containt">
-        <div class="profile">
-          <div class="presentation">
-            <img src="images/image-jeremy.png" />
-            <p>Report for <span class="bold"> Jeremy Robson </span></p>
+    <main class="dashboard">
+      <section class="profile-card">
+        <div class="profile-info">
+          
+         <img src="images/image-jeremy.png" alt="Jeremy Robson" class="avatar" />
+    <div class="report">
+            <p>Report for</p> <h1>Jeremy Robson</h1>
           </div>
-          <ul>
-            <li>Daily</li>
-            <li>Weekly</li>
-            <li>Monthly</li>
-          </ul>
-        </div>
-        <div class="daily-work">
-          <img src="images/icon-work.svg" />
-          <div class="title-daily">
-            Work 5hrs
-            <img src="images/icon-ellipsis.svg" />
+         </div>
+         
+            <ul class="time-filters">
+              <li class="active">Daily</li>
+              <li>Weekly</li>
+              <li>Monthly</li>
+            </ul>
+         
+        </section>
+       <section class="cards">
+        <div class="card-work">
+   <div class="card-bg"><img src="images/icon-work.svg" alt="Work icon" />
+<div class="card-content">
+          <div class="img-work">
+  <div class="card-header">
+    <h2>Work</h2>
+          
+            <img src="images/icon-ellipsis.svg" alt="menu" />
           </div>
+  <div class="card-body">
           <div class="time">
-            <!-- daily -->
-            <p class="time-daily">Previous - <span class="bold"> 7hrs</span></p>
-            <!-- daily -->
-
-            <p class="time-weekly"><span class="bold"> 32hrs</span></p>
-            <!-- weekly -->
-            <p class="time-weekly">
-              Previous - <span class="bold">36hrs</span>
-            </p>
-            <!-- weekly -->
-            <p class="time-monthly"><span class="bold"> 103hrs</span></p>
-            <!-- monthly -->
-            <p class="monthly">Previous - <span class="bold"> 128hrs</span></p>
-            <!-- monthly -->
+            <p class="time-daily">Previous - <span class="bold">7hrs</span></p>
+            <p class="time-weekly"><span class="bold">32hrs</span></p>
+            <p class="time-weekly">Previous - <span class="bold">36hrs</span></p>
+            <p class="time-monthly"><span class="bold">103hrs</span></p>
+            <p class="time-monthly">Previous - <span class="bold">128hrs</span></p>
+           </div>
           </div>
         </div>
+   
+
         <div class="play">
-          <img src="images/icon-play.svg" />
+          <img src="images/icon-play.svg" alt="Play icon" />
           <div class="title-daily">
             Play 1hr
-            <img src="images/icon-ellipsis.svg" />
+            <img src="images/icon-ellipsis.svg" alt="menu" />
           </div>
           <div class="time">
-            <!-- daily -->
-            <p class="time-daily">Previous - <span class="bold"> 1hrs</p>
-            <!-- daily -->
+            <p class="time-daily">Previous - <span class="bold">1hr</span></p>
             <p class="time-weekly"><span class="bold">10hrs</span></p>
-            <!-- weekly -->
-            <p class="time-weekly"><span class="bold">Previous - 8hrs</span></p>
-            <!-- weekly -->
+            <p class="time-weekly">Previous - <span class="bold">8hrs</span></p>
             <p class="time-monthly"><span class="bold">23hrs</span></p>
-            <!-- monthly -->
-            <p class="time-monthly">
-              <span class="bold">Previous - 29hrs</span>
-            </p>
-            <!-- monthly -->
+            <p class="time-monthly">Previous - <span class="bold">29hrs</span></p>
           </div>
         </div>
+
         <div class="study">
           <div class="title-daily">
             Study 0hrs
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
+            <img src="images/icon-ellipsis.svg" alt="menu" />
           </div>
-          <div class="time"> 
-          <!-- daily -->
-           <p class="time-daily">  Previous - <span class="bold">  1hr </span></p>
-          <!-- daily -->
-     <p class="time-weekly"><span class="bold">     4hrs</span></p>
-          <!-- weekly -->
-      <p class="time-weekly">Previous - <span class="bold">     7hrs</span></p>
-          <!-- weekly -->
-          13hrs
-          <!-- monthly -->
-          Previous - 19hrs
-          <!-- monthly -->
-           </div>
+          <div class="time">
+            <p class="time-daily">Previous - <span class="bold">1hr</span></p>
+            <p class="time-weekly"><span class="bold">4hrs</span></p>
+            <p class="time-weekly">Previous - <span class="bold">7hrs</span></p>
+            <p class="time-monthly"><span class="bold">13hrs</span></p>
+            <p class="time-monthly">Previous - <span class="bold">19hrs</span></p>
+          </div>
         </div>
-        <div class="excercice">
-          <img src="images/icon-exercise.svg" alt="Exercise" />
+
+        <div class="exercise">
+          <img src="images/icon-exercise.svg" alt="Exercise icon" />
           <div class="title-daily">
             Exercise 1hr
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
+            <img src="images/icon-ellipsis.svg" alt="menu" />
           </div>
-          <div class="time"> 
-          <!-- daily -->
-         <p class="time-daily">   Previous - <span class="bold">1hr</span></p>
-          <!-- daily -->
-      <p class="time-weekly"><span class="bold">    4hrs</span></p>
-          <!-- weekly -->
-      <p class="time-weekly">Previous -<span class="bold"> 5hrs</span></p>
-          <!-- weekly -->
-       <p class="time-monthly"><span class="bold">    11hrs</span></p>
-          <!-- monthly -->
-        <p class="time-monthly">Previous - <span  class="bold">18hrs</span> </p>
-          <!-- monthly -->
-           </div>
+          <div class="time">
+            <p class="time-daily">Previous - <span class="bold">1hr</span></p>
+            <p class="time-weekly"><span class="bold">4hrs</span></p>
+            <p class="time-weekly">Previous - <span class="bold">5hrs</span></p>
+            <p class="time-monthly"><span class="bold">11hrs</span></p>
+            <p class="time-monthly">Previous - <span class="bold">18hrs</span></p>
+          </div>
         </div>
+
         <div class="social">
-          <img src="images/icon-social.svg" alt="icone-social" />
+          <img src="images/icon-social.svg" alt="Social icon" />
           <div class="title-daily">
             Social 1hr
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
+            <img src="images/icon-ellipsis.svg" alt="menu" />
           </div>
-          <div class="time"> 
-          <!-- daily -->
-         <p class="time-daily">Previous -<span class="bold" >  3hrs</span></p>
-          <!-- daily -->
-        <p class="time-weekly"><span class="bold">  5hrs</span></p>
-          <!-- weekly -->
-        <p class="time-weekly">Previous -<span class="bold">   10hrs</span></p>
-          <!-- weekly -->
-        <p class="time-monthly"><span class="bold">   21hrs</span></p>
-          <!-- monthly -->
-         <p class="time-monthly">Previous -<span class="bold">   23hrs</span></p>
-          <!-- monthly -->
+          <div class="time">
+            <p class="time-daily">Previous - <span class="bold">3hrs</span></p>
+            <p class="time-weekly"><span class="bold">5hrs</span></p>
+            <p class="time-weekly">Previous - <span class="bold">10hrs</span></p>
+            <p class="time-monthly"><span class="bold">21hrs</span></p>
+            <p class="time-monthly">Previous - <span class="bold">23hrs</span></p>
+          </div>
         </div>
-        </div>
+
         <div class="self-care">
-          <img src="images/icon-self-care.svg" alt="icon-self-care" />
+          <img src="images/icon-self-care.svg" alt="Self-care icon" />
           <div class="title-daily">
             Self Care 0hrs
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
+            <img src="images/icon-ellipsis.svg" alt="menu" />
           </div>
-          <div class="time"> 
-          <!-- daily -->
-       <p class="time-daily"></p>     Previous - <span class="bold"> 1hr</span></p>
-          <!-- daily -->
-        <p class="time-weekly"><span class="bold"></span>   2hrs</span></p>
-          <!-- weekly -->
-        <p class="time-weekly">Previous -<span class="bold"></span> 2hrs</span></p>
-          <!-- weekly -->
-         <p class="time-monthly"><span class="bold"></span>  7hrs</span></p>
-          <!-- monthly -->
-         <p class="time-monthly">Previous -<span class="bold">  11hrs</span></p>
-          <!-- monthly -->
-       </div>
+          <div class="time">
+            <p class="time-daily">Previous - <span class="bold">1hr</span></p>
+            <p class="time-weekly"><span class="bold">2hrs</span></p>
+            <p class="time-weekly">Previous - <span class="bold">2hrs</span></p>
+            <p class="time-monthly"><span class="bold">7hrs</span></p>
+            <p class="time-monthly">Previous - <span class="bold">11hrs</span></p>
+          </div>
+        </div>
       </div>
     </main>
+
     <div class="attribution">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
     </div>
   </body>
 </html>
+
