@@ -3,34 +3,39 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: "Rubik", sans-serif;
   background-color: hsl(226, 43%, 10%);
-  font-size: 18px;
   color: white;
-  isplay: flex;
+  min-height: 100vh;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  
 }
+
+/* ======= GRID ======= */
 .dashboard {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
   gap: 2rem;
   max-width: 1200px;
-  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
 }
- .profile-card  {
+
+/* ======= PROFILE CARD ======= */
+.profile-card {
   background-color: hsl(235, 46%, 20%);
   border-radius: 15px;
   overflow: hidden;
   grid-row: span 2;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  
 }
+
 .profile-info {
   background-color: hsl(246, 80%, 60%);
   padding: 2rem 1.5rem;
@@ -46,7 +51,6 @@ body {
   border: 3px solid white;
   border-radius: 50%;
 }
-
 
 .report p {
   color: hsl(236, 100%, 87%);
@@ -77,6 +81,8 @@ body {
 .time-filters li.active {
   color: white;
 }
+
+/* ======= ACTIVITY CARDS ======= */
 
 .card {
   border-radius: 15px;
@@ -123,4 +129,62 @@ body {
 .card-body .previous {
   font-size: 0.875rem;
   color: hsl(236, 100%, 87%);
+}
+
+/* ======= BACKGROUND COLORS AND ICONS ======= */
+.card.work .card-bg {
+  background-color: hsl(15, 100%, 70%);
+  background-image: url("images/icon-work.svg");
+}
+.card.work {
+}
+.card.play .card-bg {
+  background-color: hsl(195, 74%, 62%);
+  background-image: url("images/icon-play.svg");
+}
+
+.card.study .card-bg {
+  background-color: hsl(348, 100%, 68%);
+  background-image: url("images/icon-study.svg");
+}
+
+.card.exercise .card-bg {
+  background-color: hsl(145, 58%, 55%);
+  background-image: url("images/icon-exercise.svg");
+}
+
+.card.social .card-bg {
+  background-color: hsl(264, 64%, 52%);
+  background-image: url("images/icon-social.svg");
+}
+
+.card.self-care .card-bg {
+  background-color: hsl(43, 84%, 65%);
+  background-image: url("images/icon-self-care.svg");
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-body .current {
+    font-size: 1.5rem;
+  }
+
+  .profile-info {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .report h1 {
+    font-size: 1.2rem;
+  }
 }
