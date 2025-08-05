@@ -23,7 +23,8 @@ body {
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2em;
+  height: 100vh;
 }
 
 /* ======= PROFILE CARD ======= */
@@ -139,8 +140,7 @@ body {
   background-color: hsl(15, 100%, 70%);
   background-image: url("images/icon-work.svg");
 }
-.card.work {
-}
+
 .card.play .card-bg {
   background-color: hsl(195, 74%, 62%);
   background-image: url("images/icon-play.svg");
@@ -165,11 +165,26 @@ body {
   background-color: hsl(43, 84%, 65%);
   background-image: url("images/icon-self-care.svg");
 }
+footer {
+  grid-column: 1/ -1;
+}
+footer .attribution {
+  text-align: center;
+  font-size: 11px;
+  margin-top: 2rem;
+}
+footer .attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
 /* ======= RESPONSIVE ======= */
-@media (max-width: 768px) {
+@media (max-width: 375px) {
   .dashboard {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    padding: 0rem;
+    margin: 0rem;
   }
 
   .card-body {
