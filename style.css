@@ -180,11 +180,20 @@ footer .attribution a {
 /* ======= RESPONSIVE ======= */
 @media (max-width: 375px) {
   .dashboard {
+    display: block;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 1rem;
     padding: 0rem;
-    margin: 0rem;
+    width: 100%;
+  }
+  .dasbord.profile-card {
+    display: block;
+  }
+  .time-filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .card-body {
