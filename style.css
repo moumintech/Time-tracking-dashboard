@@ -214,4 +214,13 @@ footer .attribution a {
   .report h1 {
     font-size: 1.2rem;
   }
+  .card.work {
+    margin-top: 1rem;
+  }
+
+  .card-body {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+  }
 }
