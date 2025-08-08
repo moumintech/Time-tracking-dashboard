@@ -71,6 +71,14 @@ body {
   flex-direction: column;
   gap: 1rem;
 }
+.time-filters .filter {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.time-filters .filter.active {
+  opacity: 1;
+  font-weight: 600;
+}
 
 .time-filters li {
   color: hsl(236, 100%, 87%);
