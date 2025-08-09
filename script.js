@@ -7,7 +7,7 @@ function showFrame(frame) {
 
   document
     .querySelectorAll(`.${frame}-active`)
-    .forEach((el) => (el.style.display = "")); // laisse le display naturel (évite les soucis block/inline)
+    .forEach((el) => (el.style.display = ""));
 
   document
     .querySelectorAll(".time-filters .filter")

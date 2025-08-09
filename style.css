@@ -206,8 +206,7 @@ footer .attribution a {
 
   .card-body {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
   }
 
   .card-body .current {
