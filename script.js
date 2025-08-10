@@ -23,3 +23,21 @@ document.querySelector(".time-filters").addEventListener("click", (e) => {
   if (!FRAMES.includes(frame)) return;
   showFrame(frame);
 });
+
+const isMobile = window.matchMedia("(max-width: 768px)");
+
+function replaceTextOnMobile() {
+  if (!isMobile.matches) return;
+
+  document.querySelectorAll(".previous").forEach((el) => {
+    el.childNodes.forEach((node) => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        node.textContent = node.textContent.replace("Previous", "Last");
+      }
+    });
+  });
+}
+
+replaceTextOnMobile();
+
+isMobile.addEventListener("change", replaceTextOnMobile);
