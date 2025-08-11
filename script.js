@@ -41,3 +41,16 @@ function replaceTextOnMobile() {
 replaceTextOnMobile();
 
 isMobile.addEventListener("change", replaceTextOnMobile);
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".daily-active, .monthly-active").forEach((el) => {
+    el.style.display = "none";
+  });
+
+  document.querySelectorAll(".weekly-active").forEach((el) => {
+    el.style.display = "block";
+  });
+
+  document
+    .querySelector('.filter[data-frame="weekly"]')
+    .classList.add("active");
+});
