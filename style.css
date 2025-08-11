@@ -184,6 +184,7 @@ footer .attribution {
 footer .attribution a {
   color: hsl(228, 45%, 44%);
 }
+/* Style pour le filtre actif */
 
 /* ======= RESPONSIVE ======= */
 @media (max-width: 375px) {
