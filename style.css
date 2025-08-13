@@ -29,6 +29,7 @@ body {
 
 /* ======= PROFILE CARD ======= */
 .profile-card {
+  position: relative;
   background-color: hsl(235, 46%, 20%);
   border-radius: 15px;
   overflow: hidden;
@@ -65,6 +66,9 @@ body {
 }
 
 .time-filters {
+  position: absolute;
+  bottom: 0;
+  top: 10;
   list-style: none;
   padding: 1.5rem;
   display: flex;
@@ -196,18 +200,21 @@ footer .attribution a {
     padding: 0rem;
     width: 100%;
   }
-  .dasbord.profile-card {
+  .profile-card {
     display: block;
+    position: static;
   }
   .time-filters {
+    position: static;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-
   .card-body {
-    display: flex;
-    flex-direction: row;
+    width: 100%;
+  }
+  .previous {
+    margin-left: auto;
   }
 
   .card-body .current {
