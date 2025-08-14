@@ -18,24 +18,31 @@ body {
 /* ======= GRID ======= */
 .dashboard {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, auto);
+  /* 4 colonnes, responsive si l’écran rétrécit */
+  grid-template-columns: repeat(4, minmax(240px, 1fr));
+  /* >>> même hauteur pour toutes les lignes */
+  grid-auto-rows: 220px; /* ajuste 200–240px selon ton goût */
   gap: 2rem;
-  max-width: 1200px;
+
+  width: min(1100px, 100%);
   margin: 0 auto;
-  padding: 2em;
-  height: 100vh;
+  padding: 2rem;
+
+  /* pas de 100vh ici pour que le centrage du body fonctionne bien */
+  height: auto;
+  align-items: stretch;
 }
 
 /* ======= PROFILE CARD ======= */
+
 .profile-card {
-  position: relative;
   background-color: hsl(235, 46%, 20%);
   border-radius: 15px;
   overflow: hidden;
   grid-row: span 2;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .profile-info {
@@ -66,9 +73,6 @@ body {
 }
 
 .time-filters {
-  position: absolute;
-  bottom: 0;
-  top: 10;
   list-style: none;
   padding: 1.5rem;
   display: flex;
@@ -101,10 +105,13 @@ body {
   border-radius: 15px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card-bg {
-  height: 50px;
+  height: 72px;
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 60px;
@@ -114,9 +121,10 @@ body {
   background-color: hsl(235, 46%, 20%);
   border-radius: 15px;
   padding: 1.5rem;
-  position: relative;
-  top: -20px;
-  z-index: 1;
+  margin-top: -20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-header {
@@ -135,6 +143,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-top: auto;
 }
 
 .card-body .current {
@@ -212,11 +221,14 @@ footer .attribution a {
   }
   .card-body {
     width: 100%;
-  }
-  .previous {
-    margin-left: auto;
-  }
 
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .card-body .current {
+    font-size: 1.5rem;
+  }
   .card-body .current {
     font-size: 1.5rem;
   }
