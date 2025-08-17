@@ -186,17 +186,7 @@ body {
   background-color: hsl(43, 84%, 65%);
   background-image: url("images/icon-self-care.svg");
 }
-footer {
-  grid-column: 1/ -1;
-}
-footer .attribution {
-  text-align: center;
-  font-size: 11px;
-  margin-top: 2rem;
-}
-footer .attribution a {
-  color: hsl(228, 45%, 44%);
-}
+
 /* Style pour le filtre actif */
 
 /* ======= RESPONSIVE ======= */
